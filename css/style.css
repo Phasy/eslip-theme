@@ -66,11 +66,22 @@ p {
     margin: 0 0 10px
 }
 
-ol, ul {
+ul {
     padding: 0;
     margin: 0;
     list-style: none
 }
+
+ul.dotted {
+    list-style: disc;
+    padding: 0 20px;
+}
+
+ol {
+    margin-top: 10px;
+}
+
+
 
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0
