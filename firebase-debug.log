@@ -1,0 +1,33 @@
+[debug] [2024-12-18T20:28:20.346Z] ----------------------------------------------------------------------
+[debug] [2024-12-18T20:28:20.356Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pemsi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-12-18T20:28:20.358Z] CLI Version:   13.5.2
+[debug] [2024-12-18T20:28:20.360Z] Platform:      win32
+[debug] [2024-12-18T20:28:20.360Z] Node Version:  v18.20.4
+[debug] [2024-12-18T20:28:20.361Z] Time:          Wed Dec 18 2024 22:28:20 GMT+0200 (Central Africa Time)
+[debug] [2024-12-18T20:28:20.362Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-18T20:28:20.421Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-18T20:28:20.422Z] > authorizing via signed-in user (pemsimuko@gmail.com)
+[debug] [2024-12-18T20:28:20.422Z] [iam] checking project project-eslip for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-18T20:28:20.424Z] > refreshing access token with scopes: []
+[debug] [2024-12-18T20:28:20.427Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-12-18T20:28:20.427Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-18T20:28:21.153Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-12-18T20:28:21.153Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-18T20:28:21.153Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-eslip:testIamPermissions [none]
+[debug] [2024-12-18T20:28:21.153Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-eslip:testIamPermissions x-goog-quota-user=projects/project-eslip
+[debug] [2024-12-18T20:28:21.153Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-eslip:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-18T20:28:23.165Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-eslip:testIamPermissions 401
+[debug] [2024-12-18T20:28:23.165Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-eslip:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2024-12-18T20:28:23.165Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-12-18T20:28:23.166Z] > refreshing access token with scopes: []
+[debug] [2024-12-18T20:28:23.166Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-12-18T20:28:23.166Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-18T20:28:24.795Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-12-18T20:28:24.795Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-18T20:28:24.795Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/project-eslip [none]
+[debug] [2024-12-18T20:28:30.103Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/project-eslip 401
+[debug] [2024-12-18T20:28:30.103Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/project-eslip {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-12-18T20:28:30.104Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
